@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificações Google - Verificador de Status</title>
+    <meta name="description" content="Verifique o status de sua certificação Google Educators Nível 1, 2 e Instrutor.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- PapaParse for CSV processing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo-container">
+                <span class="g-blue">G</span>
+                <span class="g-red">o</span>
+                <span class="g-yellow">o</span>
+                <span class="g-blue">g</span>
+                <span class="g-green">l</span>
+                <span class="g-red">e</span>
+                <span class="badge">Certificações</span>
+            </div>
+            <h1>Status da Certificação</h1>
+            <p class="subtitle">Insira o e-mail cadastrado para verificar sua validade e status.</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-card">
+                <div class="input-group">
+                    <input type="email" id="emailInput" placeholder="exemplo@equipedavinci.com.br" aria-label="E-mail institucional">
+                    <button id="searchBtn" type="button">
+                        <span class="btn-text">Verificar</span>
+                        <div class="loader" id="loader"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultsSection" class="results-section hidden">
+            <div class="results-header">
+                <h2>Resultados Encontrados</h2>
+                <div class="divider"></div>
+            </div>
+            <div id="resultsGrid" class="results-grid">
+                <!-- Results will be injected here -->
+            </div>
+        </section>
+
+        <section id="noResults" class="no-results hidden">
+            <div class="no-results-card">
+                <p>Nenhuma certificação encontrada para este e-mail.</p>
+                <span>Verifique se o e-mail digitado está correto.</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Leonardo da Vinci - Controle de Certificações</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
