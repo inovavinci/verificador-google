@@ -3,6 +3,7 @@ const CONFIG = {
     sheets: [
         { id: '0', name: 'Google Educator Nível 1' },
         { id: '351678237', name: 'Google Educator Nível 2' },
+        { id: '294250963', name: 'Gemini' },
         { id: '813865191', name: 'Google Certified Instructor' }
     ]
 };
