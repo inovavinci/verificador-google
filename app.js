@@ -94,8 +94,9 @@ function displayResults(certs) {
         const statusClass = cert.status.toLowerCase().replace(/\s+/g, '-');
         
         card.innerHTML = `
-            <span class="cert-level">${cert.level}</span>
-            <h3>Certificação Ativa</h3>
+            <div class="cert-header">
+                <h3>${cert.level}</h3>
+            </div>
             <div class="cert-info">
                 <div class="info-item">
                     <span class="info-label">Validade</span>
